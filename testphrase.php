@@ -1,0 +1,22 @@
+<?php
+require "../classes/Phrase.php";
+$phrase1 = new Phrase("  BONJOUR bonjour le tout le monde qui le voit. ");
+echo $phrase1->afficher();
+echo PHP_EOL;
+echo "Le nombre de mots de la phrase est de ".$phrase1->calculNbMots();
+echo PHP_EOL;
+echo "Le nombre de caractères de la phrase est de ".$phrase1->calculerNbCaracteres();
+echo PHP_EOL;
+echo "la phrase est". $phrase1->determinerTypePhrase();
+echo PHP_EOL;
+echo $phrase1->compterOccurrencesMot("bonjour");
+echo PHP_EOL;
+$phrase1->remplacerMot("le", "la");
+echo $phrase1->afficher();
+echo PHP_EOL;
+$phrase1->reformaterPhrase();
+echo $phrase1->afficher();
+echo PHP_EOL;
+echo "nb de voyelles dans la phrase:" .$phrase1->determinerNbVoyelles();
+echo PHP_EOL;
+echo $phrase1->motAPosition(5);
